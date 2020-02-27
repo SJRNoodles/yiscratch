@@ -1,14 +1,33 @@
 
 <script>
-var finished_link =
- "https://cdn2.scratch.mit.edu/get_image/project/" + id + "_100x80.png";
-var id = 4748;
+
+
+
+
+
+
+
+
+
+
 
 function Load(){
-document.getElementById("yiscratch_img").innerHTML = "<img src='" + finished_link + "'>";
+var name = prompt("Project ID?");
+var id = name;
+var img =
+ "https://cdn2.scratch.mit.edu/get_image/project/" + id + "_300x150.png";
+ var link="https://scratch.mit.edu/projects/" + id;
+var finished_link;
+finished_link="<a href='" + link + "'>" +  "<img src='" + img + "'>" + "</a>"
+document.getElementById('yiscratch_link').innerHTML = finished_link;
+document.getElementById('code').innerHTML = "<textarea>" + finished_link; + "</textarea>";
 }
 
 </script>
 
-<button type="button" onclick="Load();">Load</button>
-<p id="yiscratch_img">loading</p>
+<button type="button" onclick="Load();">Generate</button>
+
+<div id="yis_project" style="padding:10px; border: 1px solid #000">
+<p id="yiscratch_link"></p>
+</div>
+<p id="code"></p>

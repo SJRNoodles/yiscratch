@@ -12,3 +12,12 @@ button {
     font-family: "Helvetica";
     transition: .3s;
 }
+
+div#content {
+    background-color: #f8f8f8;
+    padding: 30px;
+}
+
+center img {
+    padding: 50px;
+}

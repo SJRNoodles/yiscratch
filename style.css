@@ -1,3 +1,14 @@
 body{
 background-color:#4d97ff;
 }
+
+button:hover {
+    background-color: #e8e8e8;
+}
+button {
+    background-color: white;
+    border: none;
+    padding: 10px 50px;
+    font-family: "Helvetica";
+    transition: .3s;
+}

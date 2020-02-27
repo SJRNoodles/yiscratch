@@ -18,7 +18,7 @@ var img =
  "https://cdn2.scratch.mit.edu/get_image/project/" + id + "_282x210.png";
  var link="https://scratch.mit.edu/projects/" + id;
 var finished_link;
-finished_link="<div id='yis_project' style='padding-right: 15px;border: 1px solid #eee;padding: 5px 10px;width: 280px;color: #211922;font-weight: bold;box-shadow: 0 2px 3px rgba(34, 25, 25, 0.5); font-family:" + "Helvetica" +";'>YIScratch<a href='" + link + "'>" +  "<img src='" + img + "'>" + "</a><pr><a href='" + link + "'>View on Scratch</a>";
+finished_link="<div id='yis_project' style='background-color:#fff;padding-right: 15px;border: 1px solid #eee;padding: 5px 10px;width: 280px;color: #211922;font-weight: bold;box-shadow: 0 2px 3px rgba(34, 25, 25, 0.5); font-family:" + "Helvetica" +";'>YIScratch<a href='" + link + "'>" +  "<img src='" + img + "'>" + "</a><pr><a href='" + link + "'>View on Scratch</a>";
 document.getElementById('yiscratch_link').innerHTML = finished_link;
 document.getElementById('code').innerHTML = "<textarea>" + finished_link; + "</textarea>";
 

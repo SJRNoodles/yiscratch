@@ -1,6 +1,6 @@
 <script>
 
-
+var tag;
 
 
 
@@ -11,13 +11,29 @@
 
 
 function Generate(){
+
 var name = prompt("Project ID?");
 var id = name;
+tag=prompt("Tag? 1-YIScratch 2- Check this out! 3- Remix this!");
+var chosen_tag ="YIScratch";
+
+if(tag==1){
+chosen_tag="YIScratch";
+}
+if(tag==2){
+chosen_tag="Check this out!";
+}
+if(tag==3){
+chosen_tag="Remix this!";
+}
+
+
+
 var img =
  "https://cdn2.scratch.mit.edu/get_image/project/" + id + "_282x210.png";
  var link="https://scratch.mit.edu/projects/" + id;
 var finished_link;
-finished_link="<div id='yis_project' style='background-color:#fff;padding-right: 15px;border: 1px solid #eee;padding: 5px 10px;width: 280px;color: #211922;font-weight: bold;box-shadow: 0 2px 3px rgba(34, 25, 25, 0.5); font-family:" + "Helvetica" +";'>YIScratch<a href='" + link + "'>" +  "<img src='" + img + "'>" + "</a><pr><a href='" + link + "'>View on Scratch</a>";
+finished_link="<div id='yis_project' style='background-color:#fff;padding-right: 15px;border: 1px solid #eee;padding: 5px 10px;width: 280px;color: #211922;font-weight: bold;box-shadow: 0 2px 3px rgba(34, 25, 25, 0.5); font-family:" + "Helvetica" +";'>" + chosen_tag + "<a href='" + link + "'>" +  "<img src='" + img + "'>" + "</a><pr><a href='" + link + "'>View on Scratch</a>";
 document.getElementById('yiscratch_link').innerHTML = finished_link;
 document.getElementById('code').innerHTML = "<textarea style=width:300px>" + finished_link; + "</textarea>";
 
@@ -50,7 +66,7 @@ document.getElementById('code').innerHTML = "<textarea style=width:300px>" + fin
         <hr>
         <h3>How do i use it?</h3>
        <br>
-        Get your project's project ID. The project ID is the numbers on your project page's address bar. Copy it using CTRL+C. After you have done that, go back to this page and click the generate button. A prompt will appear asking for your project ID. Paste your project ID in the prompt(CTRL+V) and click "OK". You did it! You can copy the embed code from the text box and paste it in your website.
+        Get your project's project ID. The project ID is the numbers on your project page's address bar. Copy it using CTRL+C. After you have done that, go back to this page and click the generate button. A prompt will appear asking for your project ID. Paste your project ID in the prompt(CTRL+V) and click "OK". After you have done this you can choose what the top letters say. Type one number from (1 - 3) and click OK. You did it! You can copy the embed code from the text box and paste it in your website.
         <br>
          <img src="https://raw.githubusercontent.com/SJRNoodles/yiscratch/master/img/howtouse.jpg">
  </div>
